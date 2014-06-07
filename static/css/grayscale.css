@@ -241,7 +241,11 @@ a:focus {
     padding-top: 100px;
 }
 
-.download-section {
+.about-section {
+    padding-bottom: 100px;
+}
+
+.reel-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -262,9 +266,10 @@ a:focus {
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
+	padding-bottom: 250px;
     }
 
-    .download-section {
+    .reel-section {
         padding: 100px 0;
     }
 
@@ -283,7 +288,7 @@ a:focus {
     transition: all .3s ease-in-out;
 }
 
-.btn-default {
+/*.btn-default {
     border: 1px solid #28c3ab;
     color: #28c3ab;
     background-color: transparent;
@@ -300,10 +305,10 @@ a:focus {
 .btn-huge {
     padding: 25px;
     font-size: 26px;
-}
+} */
 
 .banner-social-buttons {
-    margin-top: 0;
+    margin-top: 8px;
 }
 
 @media(max-width:1199px) {
@@ -322,6 +327,10 @@ a:focus {
     ul.banner-social-buttons>li:last-child {
         margin-bottom: 0;
     }
+}
+
+#contact p {
+    margin-bottom: 3px;
 }
 
 ::-moz-selection {
