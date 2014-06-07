@@ -1,6 +1,7 @@
 //Dynamic resize embedded video
 $(document).ready(function() {
   $("#reel").fitVids();
+});
 
 //jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
