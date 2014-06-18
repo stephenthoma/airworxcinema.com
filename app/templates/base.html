@@ -1,16 +1,18 @@
 {% extends "bootstrap/base.html" %}
+{% import "bootstrap/google.html" as google %}
 
-{% block title %}Airworx Cinema{% endblock %}
+{% block title %}airworx cinema{% endblock %}
 
 {% block styles %}
 {{ super() }}
 
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+
 <!-- Fonts -->
 <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'  rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'  rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,700'  rel="stylesheet" type="text/css">
 <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700'  rel="stylesheet" type="text/css">
 
-<!-- Custom theme -->
 <link href="{{ url_for('static', filename='css/grayscale.css') }}"  rel="stylesheet">
 {% endblock %}
 
@@ -37,6 +39,9 @@ id="page-top" data-spy="scroll" data-target=".navbar-custom"
         <li class="hidden">
           <a href="#page-top"></a>
         </li>
+	<li class="page-scroll">
+	  <a href="#reel">Reel</a>
+	</li>
         <li class="page-scroll">
           <a href="#about">About</a>
         </li>
@@ -58,9 +63,9 @@ id="page-top" data-spy="scroll" data-target=".navbar-custom"
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h1 class="brand-heading">Airworx Cinema</h1>
-          <p class="intro-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          <p class="intro-text">aerial videography and photography</p>
           <div class="page-scroll">
-            <a href="#about" class="btn btn-circle">
+            <a href="#reel" class="btn btn-circle">
               <i class="fa fa-angle-double-down animated"></i>
             </a>
           </div>
@@ -70,21 +75,37 @@ id="page-top" data-spy="scroll" data-target=".navbar-custom"
   </div>
 </section>
 
-<section id="about" class="about-section container content-section text-center">
+<section id="reel" class="reel-section container text-center">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
-      <h2>About Airworx Cinema</h2>
-        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-        <p>molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem</p>
-        <p>est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, o</p>
+      <iframe src="//player.vimeo.com/video/98078508?title=0&amp;byline=0&amp;portrait=0&amp;color=d10010" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
     </div>
   </div>
 </section>
 
-<section id="reel" class="reel-section container text-center">
+<section id="about" class="about-section container content-section text-center">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
-      <iframe width="640" height="390" src="http://www.youtube.com/embed/X2nLTFdOlwI?html5=1" frameborder="0" allowfullscreen></iframe>
+      <h2>About Airworx Cinema</h2>
+        <p>
+         airworx cinema is a global company, founded in 2007 by kevin martin. focusing on cutting-edge aerial media for action sports, concerts, and live events, we pride ourselves in providing the highest quality wireless HD aerial imaging on the market. our equipment was designed to perform in even the most remote locations, and transportable is our middle name. our passion is documenting yours&#8212;wherever that may take us. 
+        </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6">
+      <a href="http://stephenthoma.com">
+        <img class="img-circle" src="{{ url_for('static', filename='img/stephen.jpg') }}">
+        <h3>Stephen Thoma</h3>
+      </a>
+      <p><small>developer | producer<small></p>
+    </div>
+    <div class="col-xs-6">
+      <a href="http://kevinmart.in">
+        <img class="img-circle" src="{{ url_for('static', filename='img/kevin.jpg') }}">
+        <h3>Kevin Martin</h3>
+      </a>
+      <p><small>founder | director</small></p>
     </div>
   </div>
 </section>
@@ -93,13 +114,13 @@ id="page-top" data-spy="scroll" data-target=".navbar-custom"
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2">
       <h2>Contact us</h2>
+      <p>you have something cool in mind&#8212;we want to hear about it. give us a call or shoot us an email, and lets make it happen.</p>
+      <p><a href="mailto:kevin@airworxcinema.com">kevin@airworxcinema.com</a> | 719.200.4256</p>
       <ul class="list-inline banner-social-buttons">
-        <li><a href="mailto:kevin@airworxcinema.com" class="btn btn-default btn-lg"><i class="fa fa-location-arrow fa-fw"></i> <span class="network-name">Email</span></a>
+        <!--<li><a href="mailto:kevin@airworxcinema.com" class="btn btn-default btn-lg"><i class="fa fa-location-arrow fa-fw"></i> <span class="network-name">Email</span></a>-->
         <li><a href="https://twitter.com/airworxcinema" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
         </li>
         <li><a href="https://facebook.com/airworxcinema" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-        </li>
-        <li><a href="https://instagram.com/airworxcinema" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
         </li>
       </ul>
     </div>
@@ -115,4 +136,7 @@ id="page-top" data-spy="scroll" data-target=".navbar-custom"
 <!-- Custom js -->
 <script src="{{ url_for('static', filename='js/grayscale.js') }}"></script>
 <script src="{{ url_for('static', filename='js/jquery.fitvids.js') }}"></script>
+
+{{google.analytics(account="UA-51819718-1")}}
+
 {% endblock %}
