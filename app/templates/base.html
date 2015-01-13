@@ -85,7 +85,7 @@ id="page-top" data-spy="scroll" data-target=".navbar-custom"
 
 <section id="about" class="about-section container content-section text-center">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 scrim">
+    <div class="col-xs-12 col-lg-8 col-lg-offset-2 scrim">
       <h2>About Airworx Cinema</h2>
         <p>
            focusing on producing cutting-edge aerial media for action sports, concerts, and other live events, airworx prides itself in providing the highest quality wireless HD imaging on the market. with a team and equipment capable of performing in the most extreme environments, our passion is documenting yours&#8212; wherever that may take us.
@@ -93,37 +93,43 @@ id="page-top" data-spy="scroll" data-target=".navbar-custom"
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-4">
       <a href="http://stephenthoma.com">
         <img class="img-circle" src="{{ url_for('static', filename='img/stephen.jpg') }}">
         <h3>Stephen Thoma</h3>
       </a>
       <p class="light">developer | producer</p>
     </div>
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-4">
       <a href="http://kevinmart.in">
         <img class="img-circle" src="{{ url_for('static', filename='img/kevin.jpg') }}">
         <h3>Kevin Martin</h3>
       </a>
       <p class="light">founder | director</p>
     </div>
+    <div class="col-xs-12 col-sm-4">
+      <a href="#">
+        <img class="img-circle" src="{{ url_for('static', filename='img/sam.jpg') }}">
+        <h3>Sam Claassen</h3>
+      </a>
+      <p class="light">creative | marketing</p>
+    </div>
   </div>
 </section>
 
 <section id="contact" class="container content-section text-center">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2">
+    <div class="col-xs-12 col-lg-8 col-lg-offset-2">
       <h2>Contact us</h2>
       <p>you have something cool in mind&#8212; we want to hear about it. give us a call or shoot us an email, and lets make it happen.</p>
-      <p><a href="mailto:kevin@airworxcinema.com">kevin@airworxcinema.com</a> | 719.200.4256</p>
-      <!--<ul class="list-inline banner-social-buttons">-->
-        <!--<li><a href="https://twitter.com/airworxcinema" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>-->
-        <!--</li>-->
-        <!--<li><a href="https://facebook.com/airworxcinema" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>-->
-        <!--</li>-->
-      <!--</ul>-->
     </div>
   </div>
+  <div class="row">
+    <div class="col-xs-12 col-lg-8 col-lg-offset-2">
+      <h6 style="padding-top:5px;"><a href="mailto:kevin@airworxcinema.com">kevin@airworxcinema.com</a> 719.200.4256</h6>
+    </div>
+  </div>
+
 </section>
 {% endblock %}
 
