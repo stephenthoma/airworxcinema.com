@@ -167,7 +167,7 @@ ul.banner-social-buttons>li a {
 }
 
 .navbar-custom a {
-    color: #fff;
+    color: #fff !important;
 }
 
 .navbar-custom .nav li a {
